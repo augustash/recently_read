@@ -1,0 +1,13 @@
+name: "Recently Read"
+type: module
+description: "Tracks the history of recently read content by each user."
+package: Other
+core_version_requirement: ^10 || ^11
+configure: entity.recently_read_type.collection
+dependencies:
+  - drupal:views
+
+# Information added by Drupal.org packaging script on 2025-06-11
+version: '8.x-1.5'
+project: 'recently_read'
+datestamp: 1749654163

@@ -1,0 +1,15 @@
+recently_read.insert:
+  version: VERSION
+  js:
+    assets/js/recently_read.insert.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+
+recently_read.view:
+  version: VERSION
+  js:
+    assets/js/recently_read.view.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

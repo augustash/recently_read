@@ -1,0 +1,9 @@
+{
+    "name": "augustash/recently_read",
+    "description": "Tracks the history of recently read content by each user.",
+    "type": "drupal-custom-module",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "drupal/core": "^10 || ^11"
+    }
+}

@@ -1,0 +1,40 @@
+recently_read.settings_basic:
+  path: '/admin/config/system/recently-read/config'
+  defaults:
+    _form: '\Drupal\recently_read\Form\RecentlyReadConfigForm'
+    _title: 'Recently read configuration'
+  requirements:
+    _permission: 'access configuration pages'
+
+recently_read.ajax.insert:
+  path: '/ajax/recently-read/insert/{entity_type}/{entity}'
+  defaults:
+    _controller: '\Drupal\recently_read\Controller\AjaxController::insert'
+    _title: 'Insert new recently read record'
+  requirements:
+    _access: 'TRUE'
+  methods: [POST]
+  options:
+    parameters:
+      entity:
+        type: entity:{entity_type}
+
+recently_read.ajax.view:
+  path: '/ajax/recently-read/view/{view_id}/{display_id}/{exclude_id}'
+  defaults:
+    _controller: '\Drupal\recently_read\Controller\AjaxController::view'
+    _title: 'Render recently read view'
+    exclude_id: '0'
+  requirements:
+    _access: 'TRUE'
+  methods: [GET]
+
+recently_read.ajax.products:
+  path: '/ajax/recently-read/products/{ids}'
+  defaults:
+    _controller: '\Drupal\recently_read\Controller\AjaxController::products'
+    _title: 'Render products by IDs'
+  requirements:
+    _access: 'TRUE'
+    ids: '[0-9,]+'
+  methods: [GET]
