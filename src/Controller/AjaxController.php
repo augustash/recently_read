@@ -105,7 +105,7 @@ class AjaxController extends ControllerBase {
 
     $viewBuilder = $this->entityTypeManager()->getViewBuilder('commerce_product');
     $build = [
-      '#prefix' => '<header><h2>Recently Viewed Products</h2></header><div class="view recently-viewed"><div class="view-content">',
+      '#prefix' => '<div class="view recently-viewed"><header><h2>Recently Viewed Products</h2></header><div class="inner">',
       '#suffix' => '</div></div>',
       'content' => $viewBuilder->viewMultiple($ordered, 'teaser'),
     ];
